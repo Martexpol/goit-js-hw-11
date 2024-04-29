@@ -1,5 +1,11 @@
 body {
   margin: 0 auto;
+  font-family: Calibri;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
 }
 header {
   background-color: #5775ba;
@@ -46,14 +52,63 @@ header {
   border-radius: 2px;
   width: 270px;
 }
+input:focus {
+  outline: none;
+}
 
 .gallery {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  gap: 20px;
+  max-width: 1280px;
 }
 
-.photo-card {
-  max-width: calc(100% / 4 - 100px);
+.card {
+  width: 300px;
+  height: 240px;
+  border-radius: 2px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+.photo-container {
+  height: 200px;
+  width: 300px;
+  overflow: hidden;
+}
+.photo {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+.info {
+  display: flex;
+  height: 40px;
+  justify-content: space-around;
+}
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 2px;
+}
+
+.button-container {
+  width: 100px;
+  height: 50px;
+  margin: auto;
+}
+
+.load-more {
+  width: 80px;
+  height: 30px;
+  background-color: #b3c1e4;
+  border-radius: 4px;
+  background-color: #b3c1e4;
+  border: 1px solid #4466b6;
+  font-family: Calibri;
+  font-weight: 700;
+  color: #243f80;
+  margin-top: 10px;
 }
