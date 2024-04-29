@@ -7,7 +7,7 @@ console.log('check');
 //funkcja wyszukiwarki
 async function searchImages(searchTerm) {
   const url = `https://pixabay.com/api/?key=43633313-2d57b2d2b488e671d86985190&q=${searchTerm}&image_type=photo&orientation=horizontal&safesearch=true`;
-  console.log(params.toString());
+  console.log(url);
   try {
     const response = await axios.get(url);
     return response.data;
