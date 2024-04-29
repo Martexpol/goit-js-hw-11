@@ -5,7 +5,7 @@ import { searchImages } from 'pixabay-api';
 console.log('check');
 
 //funkcja wyszukiwarki
-async function searchImages(searchTerm) {
+async function searchPhotos(searchTerm) {
   const url = `https://pixabay.com/api/?key=43633313-2d57b2d2b488e671d86985190&q=${searchTerm}&image_type=photo&orientation=horizontal&safesearch=true`;
   console.log(url);
   try {
@@ -25,7 +25,7 @@ search.addEventListener('submit', ev => {
   const searchTerm = ev.currentTarget.elements.searchQuery.value;
   console.log(`searchTerm to: ${searchTerm}`);
 
-  searchImages(searchTerm)
+  searchPhotos(searchTerm)
     .then(data => {
       console.log('Wyniki wyszukiwania:', data);
     })
