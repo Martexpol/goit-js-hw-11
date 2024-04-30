@@ -42,7 +42,6 @@ search.addEventListener('submit', async ev => {
         loadButton.addEventListener(`click`, () => {
           loadMore(lastSearchTerm, page);
           page++;
-          refresh();
         });
       }
     }
@@ -59,6 +58,6 @@ gallery.addEventListener('click', function (event) {
     captionsData: 'alt',
     captionSelector: 'img',
     captionPosition: 'bottom',
-    captionDelay: 250,
   });
+  lightbox.refresh();
 });

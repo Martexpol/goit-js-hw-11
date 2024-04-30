@@ -3,6 +3,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 let page = 1;
 const perPage = 40;
+const buttonContainer = document.querySelector('.button-container');
 
 export async function searchPhotos(searchTerm, page) {
   const url = `https://pixabay.com/api/?key=43633313-2d57b2d2b488e671d86985190&q=${searchTerm}&image_type=photo&orientation=horizontal&safesearch=true&page=${page}&per_page=${perPage}`;
@@ -61,7 +62,7 @@ export async function loadMore(lastSearchTerm, page) {
 
     const totalHits = imageData.totalHits || 0;
     if (totalHits <= perPage) {
-      loadButton.style.display = 'none';
+      buttonContainer.innerHTML = ``;
       Notify.info("We're sorry, but you've reached the end of search results.");
     }
   } catch (error) {
